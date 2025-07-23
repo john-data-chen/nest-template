@@ -8,6 +8,7 @@ const config = {
   entry: {
     main: ['@rspack/core/hot/poll?100', './src/main.ts']
   },
+  devtool: 'source-map',
   externals: [
     nodeExternals({
       allowlist: ['@rspack/core/hot/poll?100']
@@ -23,7 +24,6 @@ const config = {
         use: {
           loader: 'builtin:swc-loader',
           options: {
-            sourceMap: true,
             jsc: {
               parser: {
                 syntax: 'typescript',
@@ -84,12 +84,7 @@ const config = {
   stats: {
     errorDetails: true
   },
-  cache: {
-    type: 'filesystem',
-    buildDependencies: {
-      config: [__filename]
-    }
-  },
+  cache: true,
   ignoreWarnings: [
     {
       module: /node_modules\/express\/lib\/view\.js/,

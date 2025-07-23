@@ -11,7 +11,7 @@ This is a test project with many issues, it is a playground for me to learn Nest
 
 # Todo
 
-- [ ] Make Hot Module Replacement (HMR) work
+- [x] Make Hot Module Replacement (HMR) work
 
 ## License
 
